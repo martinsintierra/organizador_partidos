@@ -1,0 +1,252 @@
+/* Variables */
+:root {
+    --primary-color: #4CAF50;
+    --primary-color-dark: #45a049;
+    --secondary-color: #333;
+    --background-color: #f0f0f0;
+    --text-color: #333;
+    --white-color: #fff;
+    --shadow-color: rgba(0, 0, 0, 0.1);
+    --font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    --transition-duration: 0.3s;
+    --accent-color: #ff6f61;
+    --dark-background: #222;
+}
+
+/* General */
+body {
+    font-family: var(--font-family);
+    background-color: var(--background-color);
+    color: var(--text-color);
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+/* Encabezado */
+header {
+    background: linear-gradient(to right, var(--primary-color), var(--primary-color-dark));
+    color: var(--white-color);
+    padding: 20px;
+    text-align: center;
+    box-shadow: 0 2px 4px var(--shadow-color);
+    transition: background-color var(--transition-duration) ease;
+}
+
+header:hover {
+    background-color: var(--primary-color-dark);
+}
+
+/* Contenido Principal */
+main {
+    display: grid;
+    place-items: center;
+    padding: 20px;
+    gap: 20px;
+}
+
+/* Sección del Formulario */
+.form-section {
+    background-color: var(--white-color);
+    border-radius: 8px;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    max-width: 900px;
+    padding: 40px;
+}
+
+/* Gradientes y Sombras */
+.form-section {
+    background: linear-gradient(to right, #f3f3f3, #ffffff);
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
+}
+
+/* Formulario */
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+/* Etiquetas */
+label {
+    font-size: 16px;
+    font-weight: bold;
+}
+
+/* Campos de texto */
+input[type="text"],
+input[type="email"] {
+    padding: 10px;
+    font-size: 16px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    width: calc(100% - 22px); /* Compensa el padding y el border */
+}
+
+/* Botones */
+button {
+    background-color: var(--primary-color);
+    color: var(--white-color);
+    border: none;
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+    border-radius: 5px;
+    transition: background-color var(--transition-duration) ease;
+    align-self: center;
+}
+
+
+button:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+}
+
+/* Tabla */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+}
+
+thead {
+    background-color: var(--primary-color);
+    color: var(--white-color);
+}
+
+th,
+td {
+    padding: 5px;
+    text-align: center;
+    border: 1px solid #ddd;
+}
+
+th {
+    font-size: 16px;
+}
+
+tbody tr:nth-child(even) {
+    background-color: #f9f9f9;
+}
+
+tbody tr:hover {
+    background-color: #f1f1f1;
+}
+
+/* Animaciones */
+@keyframes pulse {
+    0% {
+        transform: scale(1);
+    }
+    50% {
+        transform: scale(1.05);
+    }
+    100% {
+        transform: scale(1);
+    }
+}
+
+/* Botones de Disponibilidad */
+.toggle-button {
+    padding: 10px 20px;
+    font-size: 14px;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+    background-color: #ddd;
+    transition: background-color var(--transition-duration) ease;
+}
+
+.toggle-button.active {
+    background-color: var(--primary-color);
+    color: var(--white-color);
+    animation: pulse 1s infinite;
+}
+
+/* Efectos de Desplazamiento */
+html {
+    scroll-behavior: smooth;
+}
+
+/* Resultado */
+#result {
+    margin-top: 20px;
+    font-size: 16px;
+    text-align: center;
+}
+
+/* Pie de Página */
+footer {
+    background-color: var(--secondary-color);
+    color: var(--white-color);
+    text-align: center;
+    padding: 10px;
+    position: relative;
+    bottom: 0;
+    width: 100%;
+}
+
+/* Media Query para dispositivos móviles */
+@media (max-width: 768px) {
+    .calendar table {
+        display: none; /* Ocultar la tabla en dispositivos móviles */
+    }
+
+    .mobile-calendar {
+        display: block; /* Mostrar el calendario móvil */
+    }
+
+    .calendar .day-section {
+        margin-bottom: 20px;
+    }
+    
+    .calendar .day-section h2 {
+        margin-bottom: 10px;
+        color: var(--primary-color);
+    }
+    
+    .calendar .day-section table {
+        width: 100%;
+        border-collapse: collapse;
+    }
+    
+    .calendar .day-section th,
+    .calendar .day-section td {
+        padding: 5px;
+        text-align: center;
+        border: 1px solid #ddd;
+    }
+    
+    .calendar .day-section th {
+        font-size: 16px;
+    }
+    
+    .calendar .day-section tbody tr:nth-child(even) {
+        background-color: #f9f9f9;
+    }
+    
+    .calendar .day-section tbody tr:hover {
+        background-color: #f1f1f1;
+    }
+    .hour-row {
+        display: none;
+    }
+    .hour-row.active {
+        display: block;
+    }
+}
+
+/* Media Query para escritorios */
+
+@media (min-width: 769px) {
+    .calendar table {
+        display: table; /* Mostrar la tabla en dispositivos de escritorio */
+    }
+    
+    .mobile-calendar {
+        display: none; /* Ocultar el calendario móvil */
+    }
+}

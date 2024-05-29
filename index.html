@@ -1,0 +1,294 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Organizador de Partidos</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+    <header>
+        <h1>Futbooool</h1>
+        <p>A jugar.</p>
+    </header>
+    <main>
+        <section class="form-section">
+            <form id="availability-form">
+                <label for="name">Nombre:</label>
+                <input type="text" id="name" name="name" placeholder="Tu nombre" required>
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" placeholder="Tu email así valido" required pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$">
+                <div class="calendar">
+                    <table class="desktop-view" >
+                        <thead>
+                            <tr>
+                                <th></th>
+                                <th colspan="7">Días</th>
+                            </tr>
+                            <tr>
+                                <th>Horas</th>
+                                <th>Lunes</th>
+                                <th>Martes</th>
+                                <th>Miércoles</th>
+                                <th>Jueves</th>
+                                <th>Viernes</th>
+                                <th>Sábado</th>
+                                <th>Domingo</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>12hs - 13hs</td>
+                                <td><button type="button" class="toggle-button hour-row" data-day="mon" data-hour="12">No Disponible</button></td>
+                                <td><button type="button" class="toggle-button hour-row" data-day="tue" data-hour="12">No Disponible</button></td>
+                                <td><button type="button" class="toggle-button hour-row" data-day="wed" data-hour="12">No Disponible</button></td>
+                                <td><button type="button" class="toggle-button hour-row" data-day="thu" data-hour="12">No Disponible</button></td>
+                                <td><button type="button" class="toggle-button hour-row" data-day="fri" data-hour="12">No Disponible</button></td>
+                                <td><button type="button" class="toggle-button hour-row" data-day="sat" data-hour="12">No Disponible</button></td>
+                                <td><button type="button" class="toggle-button hour-row" data-day="sun" data-hour="12">No Disponible</button></td>
+                            </tr>
+                            <tr>
+                                <td>13hs - 14hs</td>
+                                <td><button type="button" class="toggle-button hour-row" data-day="mon" data-hour="13">No Disponible</button></td>
+                                <td><button type="button" class="toggle-button hour-row" data-day="tue" data-hour="13">No Disponible</button></td>
+                                <td><button type="button" class="toggle-button hour-row" data-day="wed" data-hour="13">No Disponible</button></td>
+                                <td><button type="button" class="toggle-button hour-row" data-day="thu" data-hour="13">No Disponible</button></td>
+                                <td><button type="button" class="toggle-button hour-row" data-day="fri" data-hour="13">No Disponible</button></td>
+                                <td><button type="button" class="toggle-button hour-row" data-day="sat" data-hour="13">No Disponible</button></td>
+                                <td><button type="button" class="toggle-button hour-row" data-day="sun" data-hour="13">No Disponible</button></td>
+                            </tr>
+                            <tr>
+                                <td>14hs - 15hs</td> 
+                                <td><button type="button" class="toggle-button hour-row" data-day="mon" data-hour="14">No Disponible</button></td>
+                                <td><button type="button" class="toggle-button hour-row" data-day="tue" data-hour="14">No Disponible</button></td>
+                                <td><button type="button" class="toggle-button hour-row" data-day="wed" data-hour="14">No Disponible</button></td>
+                                <td><button type="button" class="toggle-button hour-row" data-day="thu" data-hour="14">No Disponible</button></td>
+                                <td><button type="button" class="toggle-button hour-row" data-day="fri" data-hour="14">No Disponible</button></td>
+                                <td><button type="button" class="toggle-button hour-row" data-day="sat" data-hour="14">No Disponible</button></td>
+                                <td><button type="button" class="toggle-button hour-row" data-day="sun" data-hour="14">No Disponible</button></td>
+                            </tr>
+                            <tr>
+                                <td>15hs - 16hs</td>
+                                <td><button type="button" class="toggle-button hour-row" data-day="mon" data-hour="15">No Disponible</button></td>
+                                <td><button type="button" class="toggle-button hour-row" data-day="tue" data-hour="15">No Disponible</button></td>
+                                <td><button type="button" class="toggle-button hour-row" data-day="wed" data-hour="15">No Disponible</button></td>
+                                <td><button type="button" class="toggle-button hour-row" data-day="thu" data-hour="15">No Disponible</button></td>
+                                <td><button type="button" class="toggle-button hour-row" data-day="fri" data-hour="15">No Disponible</button></td>
+                                <td><button type="button" class="toggle-button hour-row" data-day="sat" data-hour="15">No Disponible</button></td>
+                                <td><button type="button" class="toggle-button hour-row" data-day="sun" data-hour="15">No Disponible</button></td>
+                            </tr>
+                            <tr>
+                                <td>16hs - 17hs</td>
+                                <td><button type="button" class="toggle-button hour-row" data-day="mon" data-hour="16">No Disponible</button></td>
+                                <td><button type="button" class="toggle-button hour-row" data-day="tue" data-hour="16">No Disponible</button></td>
+                                <td><button type="button" class="toggle-button hour-row" data-day="wed" data-hour="16">No Disponible</button></td>
+                                <td><button type="button" class="toggle-button hour-row" data-day="thu" data-hour="16">No Disponible</button></td>
+                                <td><button type="button" class="toggle-button hour-row" data-day="fri" data-hour="16">No Disponible</button></td>
+                                <td><button type="button" class="toggle-button hour-row" data-day="sat" data-hour="16">No Disponible</button></td>
+                                <td><button type="button" class="toggle-button hour-row" data-day="sun" data-hour="16">No Disponible</button></td>
+                            </tr>
+                            <tr>
+                                <td>17hs - 18hs</td>
+                                <td><button type="button" class="toggle-button hour-row" data-day="mon" data-hour="17">No Disponible</button></td>
+                                <td><button type="button" class="toggle-button hour-row" data-day="tue" data-hour="17">No Disponible</button></td>
+                                <td><button type="button" class="toggle-button hour-row" data-day="wed" data-hour="17">No Disponible</button></td>
+                                <td><button type="button" class="toggle-button hour-row" data-day="thu" data-hour="17">No Disponible</button></td>
+                                <td><button type="button" class="toggle-button hour-row" data-day="fri" data-hour="17">No Disponible</button></td>
+                                <td><button type="button" class="toggle-button hour-row" data-day="sat" data-hour="17">No Disponible</button></td>
+                                <td><button type="button" class="toggle-button hour-row" data-day="sun" data-hour="17">No Disponible</button></td>
+                            </tr>
+                            <tr>
+                                <td>18hs - 19hs</td>
+                                <td><button type="button" class="toggle-button hour-row" data-day="mon" data-hour="18">No Disponible</button></td>
+                                <td><button type="button" class="toggle-button hour-row" data-day="tue" data-hour="18">No Disponible</button></td>
+                                <td><button type="button" class="toggle-button hour-row" data-day="wed" data-hour="18">No Disponible</button></td>
+                                <td><button type="button" class="toggle-button hour-row" data-day="thu" data-hour="18">No Disponible</button></td>
+                                <td><button type="button" class="toggle-button hour-row" data-day="fri" data-hour="18">No Disponible</button></td>
+                                <td><button type="button" class="toggle-button hour-row" data-day="sat" data-hour="18">No Disponible</button></td>
+                                <td><button type="button" class="toggle-button hour-row" data-day="sun" data-hour="18">No Disponible</button></td>
+                            </tr>
+                            <tr>
+                                <td>19hs - 20hs</td>
+                                <td><button type="button" class="toggle-button hour-row" data-day="mon" data-hour="19">No Disponible</button></td>
+                                <td><button type="button" class="toggle-button hour-row" data-day="tue" data-hour="19">No Disponible</button></td>
+                                <td><button type="button" class="toggle-button hour-row" data-day="wed" data-hour="19">No Disponible</button></td>
+                                <td><button type="button" class="toggle-button hour-row" data-day="thu" data-hour="19">No Disponible</button></td>
+                                <td><button type="button" class="toggle-button hour-row" data-day="fri" data-hour="19">No Disponible</button></td>
+                                <td><button type="button" class="toggle-button hour-row" data-day="sat" data-hour="19">No Disponible</button></td>
+                                <td><button type="button" class="toggle-button hour-row" data-day="sun" data-hour="19">No Disponible</button></td>
+                            </tr>
+                            <tr>
+                                <td>20hs - 21hs</td>
+                                <td><button type="button" class="toggle-button hour-row" data-day="mon" data-hour="20">No Disponible</button></td>
+                                <td><button type="button" class="toggle-button hour-row" data-day="tue" data-hour="20">No Disponible</button></td>
+                                <td><button type="button" class="toggle-button hour-row" data-day="wed" data-hour="20">No Disponible</button></td>
+                                <td><button type="button" class="toggle-button hour-row" data-day="thu" data-hour="20">No Disponible</button></td>
+                                <td><button type="button" class="toggle-button hour-row" data-day="fri" data-hour="20">No Disponible</button></td>
+                                <td><button type="button" class="toggle-button hour-row" data-day="sat" data-hour="20">No Disponible</button></td>
+                                <td><button type="button" class="toggle-button hour-row" data-day="sun" data-hour="20">No Disponible</button></td>
+                            </tr>
+                            <tr>
+                                <td>21hs - 22hs</td>
+                                <td><button type="button" class="toggle-button hour-row" data-day="mon" data-hour="21">No Disponible</button></td>
+                                <td><button type="button" class="toggle-button hour-row" data-day="tue" data-hour="21">No Disponible</button></td>
+                                <td><button type="button" class="toggle-button hour-row" data-day="wed" data-hour="21">No Disponible</button></td>
+                                <td><button type="button" class="toggle-button hour-row" data-day="thu" data-hour="21">No Disponible</button></td>
+                                <td><button type="button" class="toggle-button hour-row" data-day="fri" data-hour="21">No Disponible</button></td>
+                                <td><button type="button" class="toggle-button hour-row" data-day="sat" data-hour="21">No Disponible</button></td>
+                                <td><button type="button" class="toggle-button hour-row" data-day="sun" data-hour="21">No Disponible</button></td> 
+                            </tr>
+                            <tr>
+                                <td>22hs - 23hs</td>
+                                <td><button type="button" class="toggle-button hour-row" data-day="mon" data-hour="22">No Disponible</button></td>
+                                <td><button type="button" class="toggle-button hour-row" data-day="tue" data-hour="22">No Disponible</button></td>
+                                <td><button type="button" class="toggle-button hour-row" data-day="wed" data-hour="22">No Disponible</button></td>
+                                <td><button type="button" class="toggle-button hour-row" data-day="thu" data-hour="22">No Disponible</button></td>
+                                <td><button type="button" class="toggle-button hour-row" data-day="fri" data-hour="22">No Disponible</button></td>
+                                <td><button type="button" class="toggle-button hour-row" data-day="sat" data-hour="22">No Disponible</button></td>
+                                <td><button type="button" class="toggle-button hour-row" data-day="sun" data-hour="22">No Disponible</button></td>
+                            </tr>
+                            <tr>
+                                <td>23hs - 00hs</td>
+                                <td><button type="button" class="toggle-button hour-row" data-day="mon" data-hour="23">No Disponible</button></td>
+                                <td><button type="button" class="toggle-button hour-row" data-day="tue" data-hour="23">No Disponible</button></td>
+                                <td><button type="button" class="toggle-button hour-row" data-day="wed" data-hour="23">No Disponible</button></td>
+                                <td><button type="button" class="toggle-button hour-row" data-day="thu" data-hour="23">No Disponible</button></td>
+                                <td><button type="button" class="toggle-button hour-row" data-day="fri" data-hour="23">No Disponible</button></td>
+                                <td><button type="button" class="toggle-button hour-row" data-day="sat" data-hour="23">No Disponible</button></td>
+                                <td><button type="button" class="toggle-button hour-row" data-day="sun" data-hour="23">No Disponible</button></td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+
+                 <!-- Selector de días para Móviles -->
+                 <div class="mobile-calendar">
+                    <div class="day-section">
+                        <label for="day-select">Selecciona el día:</label>
+                        <select id="day-select">
+                            <option value="mon">Lunes</option>
+                            <option value="tue">Martes</option>
+                            <option value="wed">Miércoles</option>
+                            <option value="thu">Jueves</option>
+                            <option value="fri">Viernes</option>
+                            <option value="sat">Sábado</option>
+                            <option value="sun">Domingo</option>
+                        </select>
+                    </div>
+                    <div class="hours-section">
+                        <label>Selecciona las horas:</label>
+                        <div class="hour-row" data-day="mon">
+                            <button type="button" class="toggle-button" data-hour="12">12hs - 13hs</button>
+                            <button type="button" class="toggle-button" data-hour="13">13hs - 14hs</button>
+                            <button type="button" class="toggle-button" data-hour="14">14hs - 15hs</button>
+                            <button type="button" class="toggle-button" data-hour="15">15hs - 16hs</button>
+                            <button type="button" class="toggle-button" data-hour="16">16hs - 17hs</button>
+                            <button type="button" class="toggle-button" data-hour="17">17hs - 18hs</button>
+                            <button type="button" class="toggle-button" data-hour="18">18hs - 19hs</button>
+                            <button type="button" class="toggle-button" data-hour="19">19hs - 20hs</button>
+                            <button type="button" class="toggle-button" data-hour="20">20hs - 21hs</button>
+                            <button type="button" class="toggle-button" data-hour="21">21hs - 22hs</button>
+                            <button type="button" class="toggle-button" data-hour="22">22hs - 23hs</button>
+                            <button type="button" class="toggle-button" data-hour="23">23hs - 00hs</button>
+                        </div>
+                        <div class="hour-row" data-day="tue">
+                            <button type="button" class="toggle-button" data-hour="12">12hs - 13hs</button>
+                            <button type="button" class="toggle-button" data-hour="13">13hs - 14hs</button>
+                            <button type="button" class="toggle-button" data-hour="14">14hs - 15hs</button>
+                            <button type="button" class="toggle-button" data-hour="15">15hs - 16hs</button>
+                            <button type="button" class="toggle-button" data-hour="16">16hs - 17hs</button>
+                            <button type="button" class="toggle-button" data-hour="17">17hs - 18hs</button>
+                            <button type="button" class="toggle-button" data-hour="18">18hs - 19hs</button>
+                            <button type="button" class="toggle-button" data-hour="19">19hs - 20hs</button>
+                            <button type="button" class="toggle-button" data-hour="20">20hs - 21hs</button>
+                            <button type="button" class="toggle-button" data-hour="21">21hs - 22hs</button>
+                            <button type="button" class="toggle-button" data-hour="22">22hs - 23hs</button>
+                            <button type="button" class="toggle-button" data-hour="23">23hs - 00hs</button>
+                        </div>
+                        <div class="hour-row" data-day="wed">
+                            <button type="button" class="toggle-button" data-hour="12">12hs - 13hs</button>
+                            <button type="button" class="toggle-button" data-hour="13">13hs - 14hs</button>
+                            <button type="button" class="toggle-button" data-hour="14">14hs - 15hs</button>
+                            <button type="button" class="toggle-button" data-hour="15">15hs - 16hs</button>
+                            <button type="button" class="toggle-button" data-hour="16">16hs - 17hs</button>
+                            <button type="button" class="toggle-button" data-hour="17">17hs - 18hs</button>
+                            <button type="button" class="toggle-button" data-hour="18">18hs - 19hs</button>
+                            <button type="button" class="toggle-button" data-hour="19">19hs - 20hs</button>
+                            <button type="button" class="toggle-button" data-hour="20">20hs - 21hs</button>
+                            <button type="button" class="toggle-button" data-hour="21">21hs - 22hs</button>
+                            <button type="button" class="toggle-button" data-hour="22">22hs - 23hs</button>
+                            <button type="button" class="toggle-button" data-hour="23">23hs - 00hs</button>
+                        </div>
+                        <div class="hour-row" data-day="thu">
+                            <button type="button" class="toggle-button" data-hour="12">12hs - 13hs</button>
+                            <button type="button" class="toggle-button" data-hour="13">13hs - 14hs</button>
+                            <button type="button" class="toggle-button" data-hour="14">14hs - 15hs</button>
+                            <button type="button" class="toggle-button" data-hour="15">15hs - 16hs</button>
+                            <button type="button" class="toggle-button" data-hour="16">16hs - 17hs</button>
+                            <button type="button" class="toggle-button" data-hour="17">17hs - 18hs</button>
+                            <button type="button" class="toggle-button" data-hour="18">18hs - 19hs</button>
+                            <button type="button" class="toggle-button" data-hour="19">19hs - 20hs</button>
+                            <button type="button" class="toggle-button" data-hour="20">20hs - 21hs</button>
+                            <button type="button" class="toggle-button" data-hour="21">21hs - 22hs</button>
+                            <button type="button" class="toggle-button" data-hour="22">22hs - 23hs</button>
+                            <button type="button" class="toggle-button" data-hour="23">23hs - 00hs</button>
+                        </div>
+                        <div class="hour-row" data-day="fri">
+                            <button type="button" class="toggle-button" data-hour="12">12hs - 13hs</button>
+                            <button type="button" class="toggle-button" data-hour="13">13hs - 14hs</button>
+                            <button type="button" class="toggle-button" data-hour="14">14hs - 15hs</button>
+                            <button type="button" class="toggle-button" data-hour="15">15hs - 16hs</button>
+                            <button type="button" class="toggle-button" data-hour="16">16hs - 17hs</button>
+                            <button type="button" class="toggle-button" data-hour="17">17hs - 18hs</button>
+                            <button type="button" class="toggle-button" data-hour="18">18hs - 19hs</button>
+                            <button type="button" class="toggle-button" data-hour="19">19hs - 20hs</button>
+                            <button type="button" class="toggle-button" data-hour="20">20hs - 21hs</button>
+                            <button type="button" class="toggle-button" data-hour="21">21hs - 22hs</button>
+                            <button type="button" class="toggle-button" data-hour="22">22hs - 23hs</button>
+                            <button type="button" class="toggle-button" data-hour="23">23hs - 00hs</button>
+                        </div>
+                        <div class="hour-row" data-day="sat">
+                            <button type="button" class="toggle-button" data-hour="12">12hs - 13hs</button>
+                            <button type="button" class="toggle-button" data-hour="13">13hs - 14hs</button>
+                            <button type="button" class="toggle-button" data-hour="14">14hs - 15hs</button>
+                            <button type="button" class="toggle-button" data-hour="15">15hs - 16hs</button>
+                            <button type="button" class="toggle-button" data-hour="16">16hs - 17hs</button>
+                            <button type="button" class="toggle-button" data-hour="17">17hs - 18hs</button>
+                            <button type="button" class="toggle-button" data-hour="18">18hs - 19hs</button>
+                            <button type="button" class="toggle-button" data-hour="19">19hs - 20hs</button>
+                            <button type="button" class="toggle-button" data-hour="20">20hs - 21hs</button>
+                            <button type="button" class="toggle-button" data-hour="21">21hs - 22hs</button>
+                            <button type="button" class="toggle-button" data-hour="22">22hs - 23hs</button>
+                            <button type="button" class="toggle-button" data-hour="23">23hs - 00hs</button>
+                        </div>
+                        <div class="hour-row" data-day="sun">
+                            <button type="button" class="toggle-button" data-hour="12">12hs - 13hs</button>
+                            <button type="button" class="toggle-button" data-hour="13">13hs - 14hs</button>
+                            <button type="button" class="toggle-button" data-hour="14">14hs - 15hs</button>
+                            <button type="button" class="toggle-button" data-hour="15">15hs - 16hs</button>
+                            <button type="button" class="toggle-button" data-hour="16">16hs - 17hs</button>
+                            <button type="button" class="toggle-button" data-hour="17">17hs - 18hs</button>
+                            <button type="button" class="toggle-button" data-hour="18">18hs - 19hs</button>
+                            <button type="button" class="toggle-button" data-hour="19">19hs - 20hs</button>
+                            <button type="button" class="toggle-button" data-hour="20">20hs - 21hs</button>
+                            <button type="button" class="toggle-button" data-hour="21">21hs - 22hs</button>
+                            <button type="button" class="toggle-button" data-hour="22">22hs - 23hs</button>
+                            <button type="button" class="toggle-button" data-hour="23">23hs - 00hs</button>
+                        </div>
+
+                    </div>
+                </div>
+                <button type="submit" title="Enviar los horarios seleccionados">Enviar Horarios</button>
+            </form>
+            <div id="result"></div>
+        </section>
+    </main>
+    <footer>
+        <p>&copy; el pepe</p>
+    </footer>
+    <script src="script.js"></script>
+</body>
+
+</html>
